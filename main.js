@@ -38,13 +38,15 @@ window.onscroll = function () {
 
 };
 
-$("header").find(".btn-info").click(function (e) {
+$(".btn").click(function (e) {
     e.preventDefault();
     let anchorPos = $($(this).attr("href")).offset();
     $("body").animate({
         scrollTop: anchorPos.top - headerNavHeight + 1
     }, 'slow');
 })
+
+$(".nav-toggler").off('click');
 
 $(".nav-toggler").click(function (e) {
     $(".menu-panel").find("nav").toggle();
