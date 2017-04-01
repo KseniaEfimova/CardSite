@@ -19,13 +19,6 @@ header {
     font-size: 24px;
     font-weight: 400;
     line-height: 52px;
-}
-
-header {
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
-    background: #FFC107;
-    position: absolute;
-    top: 0;
     width: 100%;
 }
 
@@ -54,23 +47,64 @@ header .slider .download-info p {
 
 header .menu-panel {
     height: 66.996px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+    background: #FFC107;
 }
 
-nav ul li {
-    display: inline-block;
-    style: none;
-    float: right;
-    margin: 0px 40px;
-    padding: 10px;
-    border: solid transparent 1px;
+.menu-panel .nav-toggler{
+    display: none;
 }
 
 nav ul {
     margin: 0;
 }
 
-nav ul li:hover {
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a.btn {
+    border: solid transparent 1px;
+    font-size: 20px;
+}
+
+nav ul li a.btn:hover {
     border: solid white 1px;
+}
+
+main {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 1px;
+    height: 800px;
+}
+
+main h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.about .about-text-container {
+    display: flex;
+    margin: 50px 0;
+    justify-content: space-around;
+}
+
+.about-text p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.how-to {
+    background: white;
+    height: 800px;
+}
+
+.contacts {
+    background: #1781c1;
+    height: 800px;
 }
 
 .btn {
@@ -97,6 +131,11 @@ nav ul li:hover {
     background: rgba(255, 175, 60, 0.9);
 }
 
+.fixed {
+    position: fixed;
+    top: 0;
+}
+
 footer {
     margin-top: 50px;
 }
@@ -120,6 +159,36 @@ footer img {
 @media screen and (max-width: 600px) {
     header .slider {
         height: 300px;
+    }
+
+    header .menu-panel {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    header .menu-panel nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .menu-panel .nav-toggler{
+        display: block;
+        align-self: flex-end;
+        height: 52px;
+    }
+
+    .menu-panel .nav-toggler .material-icons{
+        line-height: 52px;
+        font-size: 36px;
+    }
+
+    .menu-panel nav{
+        display: none;
     }
 }
 

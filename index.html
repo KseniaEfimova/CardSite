@@ -6,6 +6,8 @@
     <title>AppToFind</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 </head>
 
 <body>
@@ -16,30 +18,58 @@
             <p>Don't wait. The time will never be just right.</p>
             <div class="buttons-container">
                 <a href="#" class="btn btn-download">Download</a>
-                <a href="#" class="btn">More info</a>
+                <a href="#about" class="btn btn-info">More info</a>
             </div>
         </div>
         <div>
             <p>123</p>
         </div>
     </div>
-    <nav class="menu-panel">
-        <ul>
-            <li>Контакты</li>
-            <li>Скачать</li>
-            <li>О приложении</li>
-        </ul>
-    </nav>
+    <div class="menu-panel">
+        <div class="btn nav-toggler">
+            <i class="material-icons">menu</i>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#about" class="btn btn-info">О приложении</a>
+                </li>
+                <li>
+                    <a href="#" class="btn">Скачать</a>
+                </li>
+                <li>
+                    <a href="#" class="btn">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<section class="ad-video"></section>
-<section class="about">
-    <main></main>
+<section class="about" id="about">
+    <main>
+        <h1>О приложении</h1>
+        <div class="about-text-container">
+            <div class="about-text">
+                <p>1</p>
+            </div>
+            <div class="about-text">
+                <p>2</p>
+            </div>
+            <div class="about-text">
+                <p>3</p>
+            </div>
+        </div>
+    </main>
 </section>
-<section class="how-to"></section>
+<section class="how-to">
+</section>
 <section class="contacts"></section>
 <footer>
 </footer>
+
+<script src="jquery-3.2.0.min.js"></script>
+<script src="main.js"></script>
+
 </body>
 
 </html>
