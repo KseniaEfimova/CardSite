@@ -54,6 +54,7 @@ header .slider .device-image-container {
 
 header .slider .device-image-container img {
     height: 100%;
+    vertical-align: bottom;
 }
 
 header .menu-panel {
