@@ -4,87 +4,63 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" charset="utf-8">
     <title>AppToFind</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> </head>
 
 <body>
-<header>
-    <div class="slider">
-        <div class="download-info">
-            <h1>Get up to find!</h1>
-            <p>Don't wait. The time will never be just right.</p>
-            <div class="buttons-container">
-                <a href="#download" class="btn btn-download">Download</a>
-                <a href="#about" class="btn btn-info">More info</a>
+    <header>
+        <div class="slider">
+            <div class="download-info">
+                <h1>Get up to find!</h1>
+                <p>Don't wait. The time will never be just right.</p>
+                <div class="buttons-container"> <a href="#download" class="btn btn-download">Download</a> <a href="#about" class="btn btn-info">More info</a> </div>
             </div>
+            <div class="device-image-container"> <img src="images/p00.png"> </div>
         </div>
-        <div class="device-image-container">
-            <img src="p00.png">
+        <div class="menu-panel">
+            <div class="btn nav-toggler"> <i class="material-icons">menu</i> </div>
+            <nav>
+                <ul>
+                    <li> <a href="#about" class="btn btn-info">О приложении</a> </li>
+                    <li> <a href="#download" class="btn">Скачать</a> </li>
+                    <li> <a href="#contacts" class="btn">Контакты</a> </li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    <div class="menu-panel">
-        <div class="btn nav-toggler">
-            <i class="material-icons">menu</i>
+    </header>
+    <section class="about" id="about">
+        <main>
+            <h1>О приложении</h1>
+            <div class="text-container">
+                <div class="about-text">
+                    <p>Приложение AppToFind - это новый удобный способ обнаружить свои пропавшие вещи - начиная от брелков и заканчивая котиками.</p>
+                </div>
+                <div class="about-text">
+                    <p>Приложение AppToFind - это новый удобный способ обнаружить свои пропавшие вещи - начиная от брелков и заканчивая котиками</p>
+                </div>
+                <div class="about-text">
+                    <p>Приложение AppToFind - это новый удобный способ обнаружить свои пропавшие вещи - начиная от брелков и заканчивая котиками</p>
+                </div>
+            </div>
+        </main>
+    </section>
+    <section class="download" id="download">
+        <div class="text-container">
+            <a href="https://play.google.com/store" target="_blank"> <img src="images/google_play.png" alt="google play link"> </a>
         </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#about" class="btn btn-info">О приложении</a>
-                </li>
-                <li>
-                    <a href="#download" class="btn">Скачать</a>
-                </li>
-                <li>
-                    <a href="#contacts" class="btn">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<section class="about" id="about">
-    <main>
-        <h1>О приложении</h1>
+    </section>
+    <section class="contacts" id="contacts">
+        <h1>Наши контакты</h1>
         <div class="text-container">
             <div class="about-text">
-                <p>Приложение AppToFind - это новый удобный способ обнаружить свои пропавшие вещи - начиная от брелков и
-                    заканчивая котиками.</p>
-            </div>
-            <div class="about-text">
-                <p>Приложение AppToFind - это новый удобный способ обнаружить свои пропавшие вещи - начиная от брелков и
-                    заканчивая котиками</p>
-            </div>
-            <div class="about-text">
-                <p>Приложение AppToFind - это новый удобный способ обнаружить свои пропавшие вещи - начиная от брелков и
-                    заканчивая котиками</p>
+                <p>Контакты</p>
             </div>
         </div>
-    </main>
-</section>
-<section class="download" id="download">
-    <div class="text-container">
-        <a href="https://play.google.com/store" target="_blank">
-            <img src="google_play.png" alt="google play link">
-        </a>
-    </div>
-</section>
-<section class="contacts" id="contacts">
-    <h1>Наши контакты</h1>
-    <div class="text-container">
-        <div class="about-text">
-            <p>Контакты</p>
-        </div>
-    </div>
-</section>
-<footer>
-</footer>
-
-<script src="jquery-3.2.0.min.js"></script>
-<script src="main.js"></script>
-
+    </section>
+    <footer> </footer>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
