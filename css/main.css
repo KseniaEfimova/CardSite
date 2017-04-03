@@ -118,13 +118,13 @@ main h1,
     justify-content: flex-start;
 }
 
-.contacts-container div {
-    float: right;
-}
-
 .about-text p {
     color: rgba(0, 0, 0, 0.5);
     margin: 0 30px;
+}
+
+.about .about-text p {
+    text-align: center;
 }
 
 .text-container .about-text .icon {
@@ -158,6 +158,11 @@ main h1,
     background: rgba(0, 216, 255, 1);
     padding: 50px;
     color: rgba(0, 0, 0, 0.5);
+}
+
+.contacts .about-text {
+    display: flex;
+    margin-bottom: 0;
 }
 
 .btn {
@@ -285,6 +290,15 @@ footer p {
     }
     header .slider .download-info .buttons-container {
         display: none;
+    }
+    .contacts .about-text {
+        flex-direction: column;
+    }
+    .contacts .about-text div {
+        margin-bottom: 1em;
+    }
+    .contacts .about-text div:last-of-type {
+        margin-bottom: 0;
     }
 }
 
