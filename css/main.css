@@ -194,12 +194,11 @@ main h1,
     color: black;
     border: none;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    padding: 0;
-    margin: 0;
-    line-height: 0;
+    bottom: 20px;
+    right: 20px;
     display: none;
+    margin: 0;
+    padding: 0 15px
 }
 
 .btn-top i {
@@ -301,6 +300,10 @@ footer p {
     }
     .contacts .about-text div:last-of-type {
         margin-bottom: 0;
+    }
+    .btn-top {
+        bottom: 10px;
+        padding: 0;
     }
 }
 
