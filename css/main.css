@@ -194,9 +194,11 @@ main h1,
     color: black;
     border: none;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
+    padding: 0;
     margin: 0;
+    line-height: 0;
     display: none;
 }
 
