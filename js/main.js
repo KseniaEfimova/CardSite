@@ -10,6 +10,13 @@ let headerHeight = headerSliderHeight + headerNavHeight;
 header.style.height = headerHeight + "px";
 
 window.onresize = function () {
+    if (window.innerWidth <= 600) {
+        $(".menu-panel").find("nav").hide();
+    }
+    else {
+        $(".menu-panel").find("nav").show();
+    }
+
     header.style.height = "";
     headerSliderHeight = headerSlider.offsetHeight;
     headerNavHeight = headerNav.offsetHeight;
@@ -17,14 +24,6 @@ window.onresize = function () {
     header.style.height = headerHeight + "px";
 
     headerNavPosTop = headerNav.getBoundingClientRect().top + pageYOffset;
-
-    if (window.innerWidth < 599) {
-        $(".menu-panel").find("nav").hide();
-    }
-    else {
-        $(".menu-panel").find("nav").show();
-    }
-
 };
 
 window.onscroll = function () {
