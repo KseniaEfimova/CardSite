@@ -1,6 +1,7 @@
 let headerNav = document.getElementsByClassName("menu-panel")[0];
 let headerSlider = document.getElementsByClassName("slider")[0];
-let headerNavPosTop = headerNav.getBoundingClientRect().top + pageYOffset;
+//let headerNavPosTop = headerNav.getBoundingClientRect().top + pageYOffset;
+let headerNavPosTop = headerSlider.offsetHeight;
 let header = document.getElementsByTagName("header")[0];
 
 let headerSliderHeight = headerSlider.offsetHeight;
@@ -23,7 +24,10 @@ window.onresize = function () {
     headerHeight = headerSliderHeight + headerNavHeight;
     header.style.height = headerHeight + "px";
 
-    headerNavPosTop = headerNav.getBoundingClientRect().top + pageYOffset;
+    //headerNavPosTop = headerNav.getBoundingClientRect().top + pageYOffset;
+    headerNavPosTop = headerSliderHeight;
+
+    console.log(headerNavPosTop);
 };
 
 window.onscroll = function () {
