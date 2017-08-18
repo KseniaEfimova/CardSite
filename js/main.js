@@ -1,12 +1,12 @@
 let headerNav = document.getElementsByClassName("menu-panel")[0];
-let headerSlider = document.getElementsByClassName("slider")[0];
+let headerImage = document.getElementsByClassName("header-image")[0];
 //let headerNavPosTop = headerNav.getBoundingClientRect().top + pageYOffset;
-let headerNavPosTop = headerSlider.offsetHeight;
+let headerNavPosTop = headerImage.offsetHeight;
 let header = document.getElementsByTagName("header")[0];
 
-let headerSliderHeight = headerSlider.offsetHeight;
+let headerImageHeight = headerImage.offsetHeight;
 let headerNavHeight = headerNav.offsetHeight;
-let headerHeight = headerSliderHeight + headerNavHeight;
+let headerHeight = headerImageHeight + headerNavHeight;
 
 header.style.height = headerHeight + "px";
 
@@ -19,13 +19,13 @@ window.onresize = function () {
     }
 
     header.style.height = "";
-    headerSliderHeight = headerSlider.offsetHeight;
+    headerImageHeight = headerImage.offsetHeight;
     headerNavHeight = headerNav.offsetHeight;
-    headerHeight = headerSliderHeight + headerNavHeight;
+    headerHeight = headerImageHeight + headerNavHeight;
     header.style.height = headerHeight + "px";
 
     //headerNavPosTop = headerNav.getBoundingClientRect().top + pageYOffset;
-    headerNavPosTop = headerSliderHeight;
+    headerNavPosTop = headerImageHeight;
 
     console.log(headerNavPosTop);
 };
@@ -67,8 +67,8 @@ $(".nav-toggler").off('click');
 $(".nav-toggler").click(function (e) {
     $(".menu-panel").find("nav").toggle();
     header.style.height = "";
-    headerSliderHeight = headerSlider.offsetHeight;
+    headerImageHeight = headerImage.offsetHeight;
     headerNavHeight = headerNav.offsetHeight;
-    headerHeight = headerSliderHeight + headerNavHeight;
+    headerHeight = headerImageHeight + headerNavHeight;
     header.style.height = headerHeight + "px";
 });

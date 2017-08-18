@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/regular.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/italic.ttf);
+    font-style: italic;
+}
+
 p,
 h1 {
     margin: 4px;
@@ -11,7 +23,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 footer,
@@ -19,55 +31,112 @@ header {
     color: white;
     font-size: 24px;
     font-weight: 400;
-    line-height: 52px;
+    /*line-height: 52px;*/
     width: 100%;
     background-color: #FFC107;
     box-sizing: border-box;
 }
 
-header .slider {
-    background: radial-gradient(transparent 0%, rgba(0, 0, 0, 0.5) 100%), #FFC107 url(../images/new_opt.jpg) 0% 50% no-repeat scroll;
+header .header-image {
+    background: radial-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 100%), #FFC107 url(../images/new_opt.jpg) 0% 50% no-repeat scroll;
     background-size: 100%;
     height: 600px;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     overflow: auto;
 }
 
-header .slider .download-info {
+header .header-image .motto-container {
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
-    background: radial-gradient(rgba(0, 0, 0, 0.5) 0%, transparent 75%);
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-header .slider .download-info h1 {
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+header .header-image .motto-container .motto {
+    border-radius: 100%;
+    width: 344px;
+    height: 332px;
+    background: #549688;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-header .slider .download-info p {
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+header .header-image .motto-container .motto h1 {
+    text-transform: uppercase;
+    font-size: 64px;
+    line-height: 60px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
 }
 
-header .slider .device-image-container {
-    height: 80%;
-    align-self: flex-end;
+header .header-image .motto-container .motto h1 span.first-line {
+    font-size: 85px;
 }
 
-header .slider .device-image-container img {
+header .header-image .motto-container .motto h1 span.second-line {
+    font-size: 64px;
+}
+
+header .header-image .motto-container .motto h1 span.second-line span.star {
+    font-size: 45px;
+    vertical-align: super;
+}
+
+header .header-image .motto-container .motto-translation {
+    font-family: "Open Sans", sans-serif;
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+}
+
+header .header-image .motto-container .motto-translation p {
+    margin: 8px;
+}
+
+header .header-image .device-image-container {
     height: 100%;
-    vertical-align: bottom;
+    align-self: flex-end;
+    position: relative;
+}
+
+header .header-image .device-image-container .slider-border,
+header .header-image .device-image-container .slider-image{
+    height: 100%;
+}
+
+header .header-image .device-image-container .slider-image{
+    width: 100%;
 }
 
 header .menu-panel {
     height: 66.996px;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+    /*box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);*/
     background: #FFC107;
+}
+
+header .menu-panel .logo-and-toggler-container {
+    height: 66.996px;
     display: flex;
+    justify-content: space-between;
+}
+
+header .menu-panel .logo-container {
+    height: 66.996px;
+    margin-left: 24px;
+}
+
+header .menu-panel .logo-container img {
+    height: 100%;
 }
 
 .menu-panel .nav-toggler {
@@ -78,6 +147,7 @@ header .menu-panel {
 nav ul {
     margin: 0;
     display: flex;
+    align-items: center;
 }
 
 nav ul li {
@@ -85,12 +155,9 @@ nav ul li {
 }
 
 nav ul li a.btn {
-    border: solid transparent 1px;
-    font-size: 20px;
-}
-
-nav ul li a.btn:hover {
-    border: solid white 1px;
+    width: 146px;
+    height: 36px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
 }
 
 main {
@@ -168,28 +235,50 @@ main h1,
 }
 
 .btn {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 24px;
     text-decoration: none;
-    text-align: center;
-    padding: 0 25px;
-    border: 1px solid white;
-    border-radius: 5px;
-    margin: 5px 25px 5px 0;
+    border-radius: 3px;
     cursor: pointer;
+    position: relative;
 }
 
+.btn::after {
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: " ";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.btn:hover::after {
+    opacity: 1;
+}
+
+/*
 .btn:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255,255,255,0.3);
+}*/
+
+.btn-info {
+    background: teal;
 }
 
 .btn-download {
-    border: 1px solid rgba(255, 165, 0, 0.1);
-    background: rgba(255, 165, 0, 0.9);
+    background: #5B5497;
 }
 
-.btn-download:hover {
-    background: rgba(255, 175, 60, 0.9);
+.btn-contacts {
+    background: #F44336;
 }
 
 .btn-top {
@@ -209,6 +298,10 @@ main h1,
 
 .btn-top:hover {
     background: none;
+}
+
+.btn-top:after {
+    display: none;
 }
 
 .orange {
@@ -241,24 +334,26 @@ footer p {
 }
 
 @media screen and (max-width: 900px) {
-    header .slider {
+    header .header-image {
         height: 500px;
     }
-    header .slider .device-image-container {
+
+    header .header-image .device-image-container {
         display: none;
     }
 }
 
 @media screen and (max-width: 750px) {
-    header .slider {
+    header .header-image {
         height: 400px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    header .slider {
+    header .header-image {
         height: 300px;
     }
+
     header .menu-panel {
         height: auto;
         display: flex;
@@ -266,43 +361,59 @@ footer p {
         justify-content: flex-end;
         align-items: center;
     }
+
     header .menu-panel nav ul {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
     }
+
+    header .menu-panel .logo-and-toggler-container {
+        width: 100%;
+    }
+
     .menu-panel .nav-toggler {
         display: block;
-        align-self: flex-end;
+        /*align-self: flex-end;*/
+        align-self: center;
         height: 52px;
     }
+
     .menu-panel .nav-toggler .material-icons {
         line-height: 52px;
         font-size: 36px;
     }
+
     .menu-panel nav {
         display: none;
     }
+
     .text-container {
         flex-direction: column;
         align-items: center;
     }
+
     .about-text {
         margin-bottom: 30px;
     }
-    header .slider .download-info .buttons-container {
+
+    header .header-image .download-info .buttons-container {
         display: none;
     }
+
     .contacts .about-text {
         flex-direction: column;
     }
+
     .contacts .about-text div {
         margin-bottom: 1em;
     }
+
     .contacts .about-text div:last-of-type {
         margin-bottom: 0;
     }
+
     .btn-top {
         bottom: 10px;
         padding: 0;
@@ -310,13 +421,13 @@ footer p {
 }
 
 @media screen and (max-width: 450px) {
-    header .slider {
+    header .header-image {
         height: 200px;
     }
 }
 
 @media screen and (max-width: 320px) {
-    header .slider {
+    header .header-image {
         align-items: stretch;
         line-height: normal;
     }
