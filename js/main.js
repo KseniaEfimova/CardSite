@@ -11,7 +11,7 @@ let headerHeight = headerImageHeight + headerNavHeight;
 header.style.height = headerHeight + "px";
 
 window.onresize = function () {
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 640) {
         $(".menu-panel").find("nav").hide();
     }
     else {
