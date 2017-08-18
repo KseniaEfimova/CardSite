@@ -533,11 +533,26 @@ nav ul li a.btn {
     .main-header .header-image {
         height: 200px;
     }
+
+    .download .review-container {
+        width: 85%;
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 363px) {
+    .contacts {
+        padding: 64px 32px;
+    }
 }
 
 @media screen and (max-width: 320px) {
     .main-header .header-image {
         align-items: stretch;
         line-height: normal;
+    }
+
+    .contacts {
+        padding: 64px 16px;
     }
 }
