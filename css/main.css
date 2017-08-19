@@ -478,6 +478,10 @@ nav ul li a.btn {
         margin: 0 0 16px 0;
     }
 
+    .main-header .menu-panel nav ul li .btn:first-of-type {
+        margin-top: 16px;
+    }
+
     .main-header .menu-panel .logo-and-toggler-container {
         width: 100%;
     }
