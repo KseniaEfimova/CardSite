@@ -478,7 +478,7 @@ nav ul li a.btn {
         margin: 0 0 16px 0;
     }
 
-    .main-header .menu-panel nav ul li .btn:first-of-type {
+    .main-header .menu-panel nav ul li:first-of-type .btn {
         margin-top: 16px;
     }
 
