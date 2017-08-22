@@ -113,6 +113,7 @@ body {
 .main-header .header-image .device-image-container .slider-border,
 .main-header .header-image .device-image-container .slider-image {
     height: 100%;
+    vertical-align: bottom;
 }
 
 .main-header .header-image .device-image-container .slider-image {
