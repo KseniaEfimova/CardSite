@@ -12,10 +12,10 @@ header.style.height = headerHeight + "px";
 
 window.onresize = function () {
     if (window.innerWidth <= 640) {
-        $(".menu-panel").find("nav").hide();
+        //$(".menu-panel").find("nav").hide();
     }
     else {
-        $(".menu-panel").find("nav").show();
+        //$(".menu-panel").find("nav").show();
     }
 
     header.style.height = "";
@@ -49,6 +49,20 @@ window.onscroll = function () {
 };
 
 $(".btn").click(function (e) {
+    e.preventDefault();
+    let anchorPos = $($(this).attr("href")).offset();
+    pos = 0;
+
+    if (anchorPos !== undefined) {
+        pos = anchorPos.top - headerNavHeight + 1;
+    }
+
+    $("body").animate({
+        scrollTop: pos
+    }, 'slow');
+});
+
+$(".logo-container").click(function (e) {
     e.preventDefault();
     let anchorPos = $($(this).attr("href")).offset();
     pos = 0;

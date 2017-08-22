@@ -12,6 +12,44 @@
     font-weight: normal;
 }
 
+body.load {
+    overflow: hidden;
+}
+
+body.load::after {
+    width: 350vw;
+    height: 350vh;
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 0;
+    display: block;
+    content: " ";
+    overflow: hidden;
+}
+
+.initial-loader {
+    border: 16px solid white;
+    border-top: 16px solid #FFC107;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+
+    position: fixed;
+    z-index: 654;
+    top: calc(50vh - 60px);
+    left: calc(50vw - 60px);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 figure {
     margin: 0;
 }
@@ -166,6 +204,10 @@ nav ul li a.btn {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
 }
 
+nav ul li a.btn span.mobile {
+    display: none;
+}
+
 .about {
     padding: 40px;
 }
@@ -306,6 +348,7 @@ nav ul li a.btn {
     width: 60px;
     height: 60px;
 }
+
 .contacts .contacts-container .social-links-container {
     line-height: 2.3;
 }
@@ -411,6 +454,37 @@ nav ul li a.btn {
     top: 0;
 }
 
+@media screen and (max-width: 920px) {
+
+    .main-header .header-image {
+        justify-content: center;
+    }
+
+    .main-header .header-image .motto-container {
+        flex-basis: 100%;
+    }
+
+    .main-header .header-image .motto-container .motto-translation {
+        left: 24px;
+    }
+
+    .main-header .header-image .device-image-container {
+        display: none;
+    }
+
+    .contacts {
+        padding-bottom: 32px;
+    }
+
+    .contacts .contacts-container {
+        justify-content: space-between;
+    }
+
+    .contacts .copyright {
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .main-header .header-image {
         height: 500px;
@@ -441,7 +515,7 @@ nav ul li a.btn {
         height: 400px;
     }
 
-    .contacts .contacts-container{
+    .contacts .contacts-container {
         flex-direction: column;
         align-items: center;
     }
@@ -456,51 +530,46 @@ nav ul li a.btn {
 }
 
 @media screen and (max-width: 640px) {
-    .main-header .header-image {
-        height: 300px;
-    }
-
     .main-header .menu-panel {
-        height: auto;
+        /*height: auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        align-items: center;
+        align-items: center;*/
     }
 
     .main-header .menu-panel nav ul {
-        display: flex;
+       /* display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        align-items: center;
+        align-items: center;*/
     }
 
     .main-header .menu-panel nav ul li .btn {
-        margin: 0 0 16px 0;
+        /*margin: 0 0 16px 0;*/
+        width: 36px;
+        height: 36px;
     }
 
-    .main-header .menu-panel nav ul li:first-of-type .btn {
-        margin-top: 16px;
+    .main-header .menu-panel nav ul li a.btn span.desctop {
+        display: none;
+    }
+
+    .main-header .menu-panel nav ul li a.btn span.mobile {
+        display: block;
+    }
+
+    .main-header .menu-panel nav ul li a.btn span i {
+        vertical-align: middle;
     }
 
     .main-header .menu-panel .logo-and-toggler-container {
         width: 100%;
     }
 
-    .menu-panel .nav-toggler {
-        display: block;
-        /*align-self: flex-end;*/
-        align-self: center;
-        height: 52px;
-    }
-
     .menu-panel .nav-toggler .material-icons {
         line-height: 52px;
         font-size: 36px;
-    }
-
-    .menu-panel nav {
-        display: none;
     }
 
     .text-container {
@@ -534,11 +603,15 @@ nav ul li a.btn {
     }
 }
 
-@media screen and (max-width: 450px) {
-    .main-header .header-image {
-        height: 200px;
-    }
+@media screen and (max-width: 600px) {
 
+    .main-header .header-image {
+        background-size: auto 100%;
+        background-position: 50% 50%;
+    }
+}
+
+@media screen and (max-width: 450px) {
     .download .review-container {
         width: 85%;
         max-width: 85%;
@@ -558,6 +631,6 @@ nav ul li a.btn {
     }
 
     .contacts {
-        padding: 64px 16px;
+        padding: 64px 16px 32px 16px;
     }
 }
