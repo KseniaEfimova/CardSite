@@ -8,6 +8,7 @@ let headerImageHeight = headerImage.offsetHeight;
 let headerNavHeight = headerNav.offsetHeight;
 let headerHeight = headerImageHeight + headerNavHeight;
 
+
 header.style.height = headerHeight + "px";
 
 window.onresize = function () {
@@ -51,7 +52,7 @@ window.onscroll = function () {
 $(".btn").click(function (e) {
     e.preventDefault();
     let anchorPos = $($(this).attr("href")).offset();
-    pos = 0;
+    let pos = 0;
 
     if (anchorPos !== undefined) {
         pos = anchorPos.top - headerNavHeight + 1;
@@ -65,7 +66,7 @@ $(".btn").click(function (e) {
 $(".logo-container").click(function (e) {
     e.preventDefault();
     let anchorPos = $($(this).attr("href")).offset();
-    pos = 0;
+    let pos = 0;
 
     if (anchorPos !== undefined) {
         pos = anchorPos.top - headerNavHeight + 1;

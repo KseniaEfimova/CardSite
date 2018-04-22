@@ -1,13 +1,13 @@
 @font-face {
     font-family: "Open Sans";
-    src: url(../fonts/regular.ttf);
+    src: url(/fonts/regular.ttf);
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: url(../fonts/italic.ttf);
+    src: url(/fonts/italic.ttf);
     font-style: italic;
     font-weight: normal;
 }
@@ -81,7 +81,7 @@ body {
 }
 
 .main-header .header-image {
-    background: radial-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 100%), #FFC107 url(../images/new_opt.jpg) 0% 50% no-repeat scroll;
+    background: radial-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 100%), #FFC107 url(/images/new_opt.jpg) 0% 50% no-repeat scroll;
     background-size: 100%;
     height: 600px;
     display: flex;
@@ -270,7 +270,7 @@ nav ul li a.btn span.mobile {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background: aqua url("../images/photo.png");
+    background: aqua url("/images/photo.png");
     background-size: contain;
     border-radius: 100%;
     margin: 0 15px 0 0;
