@@ -57,7 +57,7 @@ $(".btn").click(function (e) {
         pos = anchorPos.top - headerNavHeight + 1;
     }
 
-    $("body").animate({
+    $("html, body").animate({
         scrollTop: pos
     }, 'slow');
 });
@@ -71,7 +71,7 @@ $(".logo-container").click(function (e) {
         pos = anchorPos.top - headerNavHeight + 1;
     }
 
-    $("body").animate({
+    $("html, body").animate({
         scrollTop: pos
     }, 'slow');
 });
